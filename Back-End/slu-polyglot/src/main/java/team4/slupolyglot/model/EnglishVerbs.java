@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
+import java.util.HashSet;
 
 import static team4.slupolyglot.MyConstants.*;
 
@@ -99,15 +100,35 @@ public class EnglishVerbs {
         throw new IllegalArgumentException("Invalid pronoun");
     }
 
-    // todo ed if finish with e and if finish with y
+    private boolean isVowel(char character) {
+        HashSet<Character> vowels = new HashSet<>();
+        vowels.add('a');
+        vowels.add('e');
+        vowels.add('i');
+        vowels.add('o');
+        vowels.add('u');
+
+        return vowels.contains(character);
+    }
+    private String getRegularPast(){
+        char lastChar = this.verb.charAt(this.verb.length()-1);
+        if( lastChar == 'e'){
+            return this.verb.substring(0,this.verb.length()-1)+"ed";
+        } else if (lastChar == 'y'){
+            if(!isVowel(this.verb.charAt(this.verb.length()-2)))
+                return this.verb.substring(0,this.verb.length()-1)+"ied";
+        }
+
+        return this.verb+"ed";
+    }
     private String past() throws IOException {
 
         if (!findIrregularities(this.verb) || (!isNegative && !this.verb.contains("be"))){
             String negation = isNegative ? " did not " : " ";
-            String past = isNegative ? "" : "ed";
+            String past = isNegative ? "" : getRegularPast();
             for (String englishPronoun : ENGLISH_PRONOUNS) {
                 if (pronouns.get(pronoun).equals(englishPronoun))
-                    return (englishPronoun  + negation + this.verb+past);
+                    return (englishPronoun  + negation + past);
             }
         } else {
             if(this.verb.contains("be")) {
@@ -151,11 +172,11 @@ public class EnglishVerbs {
         String negation = isNegative ? " not " : "";
 
         if(!findIrregularities(this.verb)) {
-            String pastEd = "ed";
+            String pastEd = getRegularPast();
 
             for (String englishPronoun : ENGLISH_PRONOUNS) {
                 if (pronouns.get(pronoun).equals(englishPronoun))
-                    return (englishPronoun + haveHas + negation + " " + this.verb + pastEd);
+                    return (englishPronoun + haveHas + negation + " " + pastEd);
             }
         } else { //todo handle be
             String perfect = mapIrregularity(this.verb,IRREGULAR_PERFECT);
