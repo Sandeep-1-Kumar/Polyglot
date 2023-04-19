@@ -1,10 +1,21 @@
 package team4.slupolyglot.model;
 
+import jakarta.annotation.PostConstruct;
+import org.springframework.core.io.ClassPathResource;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 
 import static team4.slupolyglot.MyConstants.*;
 
 public class EnglishVerbs {
+
+    private static final String IRREGULAR_PAST = "IRREGULAR_PAST";
+    private static final String IRREGULAR_PERFECT = "IRREGULAR_PERFECT";
+    private static final String VERB_IRREGULAR_ENGLISH_FILE = "irregular_english.tsv";
 
     private String verb;
     private String conjugatedVerb;
@@ -27,10 +38,14 @@ public class EnglishVerbs {
         this.tense = tense;
         this.pronoun = pronoun;
         this.isNegative = isNegative;
-        this.conjugatedVerb = setConjugatedVerbTense();
+        try {
+            this.conjugatedVerb = setConjugatedVerbTense();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    private String setConjugatedVerbTense() {
+    private String setConjugatedVerbTense() throws IOException {
         switch (this.tense) {
             case PRESENT -> {
                 return present();
@@ -65,14 +80,47 @@ public class EnglishVerbs {
         }
         throw new IllegalArgumentException("Invalid pronoun");
     }
-    private String past(){
-        String negation = isNegative ? " did not " : "";
-        String pastEd = isNegative ? "" : "ed";
 
+    private String treatTheBe() {
+        String[] splittedVerb = this.verb.split(" ");
+        boolean is3s = pronouns.get(pronoun).equals(ENGLISH_PRONOUNS[2]);
+        boolean is1s = pronouns.get(pronoun).equals(ENGLISH_PRONOUNS[0]);
+
+        String wasWere = (is3s || is1s) ? "was" : "were";
+        String negation = isNegative ? " not" : " ";
         for (String englishPronoun : ENGLISH_PRONOUNS) {
-            if (pronouns.get(pronoun).equals(englishPronoun))
-                return (englishPronoun  + negation + " " + this.verb+pastEd);
+            if (pronouns.get(pronoun).equals(englishPronoun)) {
+                if(splittedVerb.length == 1)
+                    return (englishPronoun + wasWere + negation);
+                else
+                    return (englishPronoun + wasWere + negation + " " + splittedVerb[1]);
+            }
         }
+        throw new IllegalArgumentException("Invalid pronoun");
+    }
+
+    // todo ed if finish with e and if finish with y
+    private String past() throws IOException {
+
+        if (!findIrregularities(this.verb) || (!isNegative && !this.verb.contains("be"))){
+            String negation = isNegative ? " did not " : " ";
+            String past = isNegative ? "" : "ed";
+            for (String englishPronoun : ENGLISH_PRONOUNS) {
+                if (pronouns.get(pronoun).equals(englishPronoun))
+                    return (englishPronoun  + negation + this.verb+past);
+            }
+        } else {
+            if(this.verb.contains("be")) {
+                return treatTheBe();
+            } else {
+                String past = mapIrregularity(this.verb, IRREGULAR_PAST);
+                for (String englishPronoun : ENGLISH_PRONOUNS) {
+                    if (pronouns.get(pronoun).equals(englishPronoun))
+                        return (englishPronoun + " " + past);
+                }
+            }
+        }
+
         throw new IllegalArgumentException("Invalid pronoun");
     }
     private String future(){
@@ -95,20 +143,73 @@ public class EnglishVerbs {
         }
         throw new IllegalArgumentException("Invalid pronoun");
     }
-    private String perfect() {
+
+    //todo able
+    private String perfect() throws IOException {
         boolean is3s = pronouns.get(pronoun).equals(ENGLISH_PRONOUNS[2]);
         String haveHas = is3s ? " has " : " have ";
         String negation = isNegative ? " not " : "";
-        String pastEd = "ed";
 
-        for (String englishPronoun : ENGLISH_PRONOUNS) {
-            if (pronouns.get(pronoun).equals(englishPronoun))
-                return (englishPronoun  + haveHas + negation + " " + this.verb+pastEd);
+        if(!findIrregularities(this.verb)) {
+            String pastEd = "ed";
+
+            for (String englishPronoun : ENGLISH_PRONOUNS) {
+                if (pronouns.get(pronoun).equals(englishPronoun))
+                    return (englishPronoun + haveHas + negation + " " + this.verb + pastEd);
+            }
+        } else { //todo handle be
+            String perfect = mapIrregularity(this.verb,IRREGULAR_PERFECT);
+
+            for (String englishPronoun : ENGLISH_PRONOUNS) {
+                if (pronouns.get(pronoun).equals(englishPronoun))
+                    return (englishPronoun + haveHas + negation + " " + perfect);
+            }
         }
         throw new IllegalArgumentException("Invalid pronoun");
     }
 
     public String getConjugatedVerb() {
         return conjugatedVerb;
+    }
+
+    @PostConstruct
+    private boolean findIrregularities(String verb) throws IOException {
+
+        ClassPathResource resource = new ClassPathResource(VERB_IRREGULAR_ENGLISH_FILE);
+
+        BufferedReader reader =
+                new BufferedReader(new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8));
+        String line;
+
+        while ((line = reader.readLine()) != null) {
+            if(line.split("\t")[0].equals(verb))
+                return true;
+        }
+
+        return false;
+    }
+    @PostConstruct
+    private String mapIrregularity(String verb, String kindOfIrregularity) throws IOException {
+        int index;
+        ClassPathResource resource = new ClassPathResource(VERB_IRREGULAR_ENGLISH_FILE);
+
+
+        if(kindOfIrregularity.equals(IRREGULAR_PAST))
+            index = 1;
+        else if(kindOfIrregularity.equals(IRREGULAR_PERFECT))
+            index = 2;
+        else
+            throw new IllegalArgumentException("Invalid kindOfIrregularity");
+
+        BufferedReader reader =
+                new BufferedReader(new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8));
+        String line;
+
+        while ((line = reader.readLine()) != null) {
+            if(line.split("\t")[0].equals(verb))
+                return line.split("\t")[index];
+        }
+
+        throw new IllegalArgumentException("This verb has no irregular form");
     }
 }
