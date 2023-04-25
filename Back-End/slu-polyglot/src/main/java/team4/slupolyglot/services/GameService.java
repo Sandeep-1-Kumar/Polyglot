@@ -23,6 +23,7 @@ public class GameService {
     private String[] tenses = {PRESENT, FUTURE, PAST}; // todo tecnical debt
     public static char[] optionsArray = {'A', 'B', 'C', 'D'};
     public static int numberOfLearningActivities = 3;
+    public static int verbNumberLimit = 3;
     public int numberOfOptions = 3;
     public List<GameDto> createGame(GameRequest gameRequest) {
 
@@ -54,7 +55,6 @@ public class GameService {
                     }
                     case MODULE_LEARNING_6 ->
                         gameThree(verbs,gameDto, ITALIAN);
-
                 }
                 break;
             case MyConstants.SPANISH :
@@ -73,8 +73,11 @@ public class GameService {
                     case MODULE_LEARNING_4 -> {
                         gameTwo(verbs,gameDto,MyConstants.SWAHILI);
                     }
-                    case  MODULE_LEARNING_5, MODULE_LEARNING_6 -> {
+                    case  MODULE_LEARNING_5-> {
                         learningTenses(verbs, gameDto, true, MODULE_LEARNING_5,MyConstants.SWAHILI);
+                    }
+                    case MODULE_LEARNING_6 ->{
+                        learningTenses(verbs, gameDto, true, MODULE_LEARNING_6,MyConstants.SWAHILI);
                     }
                 }
         }
@@ -95,8 +98,6 @@ public class GameService {
         }
         return gameDtoFirst;
     }
-
-
 
     private List<GameDto> gameOne(List<Verb> verbs, List<GameDto> gameDtoFirst,String languageId){
         for (Verb verb : verbs) {
@@ -162,7 +163,11 @@ public class GameService {
 
         }
         else if(languageId.equals(MyConstants.SWAHILI)){
-            if(moduleId == MODULE_LEARNING_5){
+            if(moduleId == MODULE_LEARNING_5 ||moduleId == MODULE_LEARNING_6){
+                if(moduleId == MODULE_LEARNING_5)
+                {
+                    verbs = verbs.subList(0,verbNumberLimit);
+                }
                 isNegative = false;
                 tenses = new String[]{IMPERATIVE};
                 String[] IMPERATIVE_PRONOUNS = new String[]{"2s","2p"};
@@ -189,10 +194,8 @@ public class GameService {
                 }
                 isNegative = true;
                 tenses = new String[]{PRESENT, FUTURE, PAST,PERFECT};
+                verbs = verbs.subList(0,verbNumberLimit);
                 for (Verb verb : verbs) {
-                    if(verb.getEnglishVerb().equals("sleep")
-                        || verb.getEnglishVerb().equals("write")
-                        || verb.getEnglishVerb().equals("speak")) {
                     for (String tens : tenses) {
                         for (String generalPronoun : GENERAL_PRONOUNS) {
                             EnglishVerbs englishVerbs =
@@ -211,17 +214,14 @@ public class GameService {
                             verb.getSwahiliVerb());
                             gameDtoSecond.add(gameDtoEntry);
                         }
-                    }
                     }
                 }
 
             }
             else{
                 tenses = new String[]{PRESENT, FUTURE, PAST,PERFECT};
+                verbs = verbs.subList(0,verbNumberLimit);
                 for (Verb verb : verbs) {
-                    if(verb.getEnglishVerb().equals("sleep")
-                        || verb.getEnglishVerb().equals("write")
-                        || verb.getEnglishVerb().equals("speak")) {
                     for (String tens : tenses) {
                         for (String generalPronoun : GENERAL_PRONOUNS) {
                             EnglishVerbs englishVerbs =
@@ -240,7 +240,6 @@ public class GameService {
                             verb.getSwahiliVerb());
                             gameDtoSecond.add(gameDtoEntry);
                         }
-                    }
                     }
                 }
             }

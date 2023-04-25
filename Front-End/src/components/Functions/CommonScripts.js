@@ -9,8 +9,17 @@ export function CommonScripts() {
 }
 
 export function genRand(nums_set) {
-  while (nums_set.size < 10) {
-    let num = Math.floor(Math.random() * 69) * 3;
+  while (nums_set.size < 15) {
+    let num = Math.floor(Math.random() * 69) * 4;
+    nums_set.add(num);
+  }
+  nums_set = Array.from(nums_set).sort((a, b) => a - b);
+  return nums_set;
+}
+
+export function genRand2(nums_set) {
+  while (nums_set.size < 15) {
+    let num = Math.floor(Math.random() * 45) * 3;
     nums_set.add(num);
   }
   nums_set = Array.from(nums_set).sort((a, b) => a - b);

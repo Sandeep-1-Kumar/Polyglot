@@ -8,9 +8,10 @@ import Navbar from "../Navbar/NavBar.js";
 function LogSign(props) {
   return (
     <div>
-      <div className="top-div"></div>
-      <Navbar />
-      <div></div>
+      <div className="absol">
+        <div className="top-div"></div>
+        <Navbar />
+      </div>
       <div className="row">
         <div className="first-div col-lg-6">
           <h2 className="h2-acc">Learn</h2>

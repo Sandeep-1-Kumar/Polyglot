@@ -1,5 +1,5 @@
 .navbar-main {
-  background-color: rgba(26, 166, 183, 0.3) !important;
+  background-color: rgba(189, 221, 226) !important;
 }
 
 .brand-name {
@@ -19,6 +19,10 @@
 .cont {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.show > .navbar-nav > .btn-nav {
+  margin-right: 0;
 }
 
 .btn-nav {

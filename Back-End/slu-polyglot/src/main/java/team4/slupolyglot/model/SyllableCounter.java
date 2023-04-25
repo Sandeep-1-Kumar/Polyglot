@@ -2,39 +2,29 @@ package team4.slupolyglot.model;
 
 import java.util.Arrays;
 
+import team4.slupolyglot.MyConstants;
+
 public class SyllableCounter {    
-     public static int countSyllables(String word) {
-        //These verbs are basically 3 syllables not 2
-        String[] specialVerbs = {
-            "kuanza", "kuomba", "kuitwa", "kuishi", "kukaa",
-            "kutoa", "kuuza", "kuosha", "kuacha", "kuanda",
-            "kujua", "kuzoea", "kuamka", "kuvaa", "kuimba",
-            "kuumwa", "kulia", "kuiba", "kuamua", "kuongea",
-            "kuonja", "kuli","kuandika","kujibu"
-        };
-        int syllables = 0;
-        boolean prevVowel = false;
+    
+    public static boolean checkMutliSyllable(String word) {
+        word = word.toLowerCase();
+        if (Arrays.asList(MyConstants.EXCEPTIONS).contains(word)) {
+            return true;
+        }
+        boolean isMutliSyllableWord = false;
+        if (word.startsWith("ku") || word.startsWith("kw")) {
+            word = word.substring(2);
+        }
+        String lastChar = word.substring(word.length() - 1);
+        if (Arrays.asList(MyConstants.VOWELS).contains(lastChar)) {
+            word = word.substring(0,word.length()-1);
+        }
         for (int i = 0; i < word.length(); i++) {
-            boolean isVowel = isVowel(word.charAt(i));
-            if (isVowel && !prevVowel) {
-                syllables++;
+            if (Arrays.asList(MyConstants.VOWELS).contains(String.valueOf(word.charAt(i)))){
+                isMutliSyllableWord = true;
+                break;
             }
-            prevVowel = isVowel;
         }
-        if (word.endsWith("e")) {
-            syllables--;
-        }
-        if (syllables == 0) {
-            syllables = 1;
-        }
-        if (Arrays.asList(specialVerbs).contains(word)) {
-            //If a verb is from special verbs it has 3 syllables
-            syllables = 3;
-        }
-            return syllables;
+        return isMutliSyllableWord;
         } 
-        
-        private static boolean isVowel(char c) {
-            return "aeiouAEIOU".indexOf(c) != -1;
-        }
     }

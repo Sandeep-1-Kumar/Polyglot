@@ -35,7 +35,7 @@ export function checkEmail(setMessage, setMessageEmail, email) {
 }
 
 export function checkPass(setMessage, setMessagePassword, password) {
-  const regExp = /^[a-zA-Z]{8,}$/;
+  const regExp = /^[a-zA-Z0-9!@#$%^&*]{8,}$/;
   setMessage((e) => {
     if (!regExp.test(password) && password !== "") {
       setMessagePassword("");

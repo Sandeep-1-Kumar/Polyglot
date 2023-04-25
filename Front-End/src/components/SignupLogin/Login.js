@@ -18,9 +18,13 @@ function Login() {
   return (
     <div className="sign-div">
       <div id="con" className="contact">
-        <div className="icon-div">
-          <Button className="title-beauty">LOGIN</Button>
-          <BiLogInCircle className="big-icon" />
+        <div className="icon-div row">
+          <div className="col-12">
+            <Button className="title-beauty">LOGIN</Button>
+          </div>
+          <div className="col-12">
+            <BiLogInCircle className="big-icon" />
+          </div>
         </div>
         <p className="about-p">Signin to Continue</p>
         {messInvalid === "Success" && (

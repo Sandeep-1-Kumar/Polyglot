@@ -22,4 +22,7 @@ public final class MyConstants {
     public final static String FUTURE = "FUT";
     public final static String PERFECT = "PERF";
     public final static String IMPERATIVE = "IMP";
+    public final static String[] VOWELS = {"a", "e", "i", "o", "u"};
+    public final static String[] EXCEPTIONS = 
+    {};
 }

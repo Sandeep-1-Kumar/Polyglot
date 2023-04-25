@@ -5,8 +5,10 @@ import Navbar from "../Navbar/NavBar.js";
 export const Home = () => {
   return (
     <div>
-      <div className="top-div"></div>
-      <Navbar />
+      <div className="absol">
+        <div className="top-div"></div>
+        <Navbar />
+      </div>
       <HeroSection />
     </div>
   );
