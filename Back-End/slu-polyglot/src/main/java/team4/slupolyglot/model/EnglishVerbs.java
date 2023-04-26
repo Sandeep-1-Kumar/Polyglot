@@ -139,7 +139,7 @@ public class EnglishVerbs {
         boolean is1s = pronouns.get(pronoun).equals(ENGLISH_PRONOUNS[0]);
 
         String wasWere = (is3s || is1s) ? "was" : "were";
-        String negation = isNegative ? " not" : " ";
+        String negation = isNegative ? " not" : "";
         for (String englishPronoun : ENGLISH_PRONOUNS) {
             if (pronouns.get(pronoun).equals(englishPronoun)) {
                 if(splittedVerb.length == 1)
@@ -173,8 +173,12 @@ public class EnglishVerbs {
         return this.verb+"ed";
     }
     private String past() throws IOException {
+        String[] splittedVerb = this.verb.split(" ");
 
-        if (!findIrregularities(this.verb) || (isNegative && !this.verb.contains("be"))){
+        if(splittedVerb[0].equals("be"))
+            return treatTheBe();
+
+        if (!findIrregularities(this.verb) || isNegative) {
             String negation = isNegative ? "did not " : "";
             String past = isNegative ? this.verb : getRegularPast();
             for (String englishPronoun : ENGLISH_PRONOUNS) {
@@ -182,14 +186,9 @@ public class EnglishVerbs {
                     return (englishPronoun  + negation + past);
             }
         } else {
-            if(this.verb.contains("be")) {
-                return treatTheBe();
-            } else {
-                String past = mapIrregularity(this.verb, IRREGULAR_PAST);
-                for (String englishPronoun : ENGLISH_PRONOUNS) {
-                    if (pronouns.get(pronoun).equals(englishPronoun))
-                        return (englishPronoun + past);
-                }
+            String past = mapIrregularity(this.verb, IRREGULAR_PAST);
+            for (String englishPronoun : ENGLISH_PRONOUNS) {
+                if (pronouns.get(pronoun).equals(englishPronoun)) return (englishPronoun + past);
             }
         }
 
