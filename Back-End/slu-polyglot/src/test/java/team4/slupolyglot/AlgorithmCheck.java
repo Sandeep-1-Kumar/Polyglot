@@ -16,8 +16,8 @@ public class AlgorithmCheck {
 
     @Test
     public void testAlgorithm() throws IOException {
-        ClassPathResource inputResource = 
-        new ClassPathResource("AlgorithmTests/Tests.tsv");
+        ClassPathResource inputResource =
+        new ClassPathResource("AlgorithmTests/test_with_no_solution.tsv");
         BufferedReader reader = new BufferedReader(new InputStreamReader
         (inputResource.getInputStream(), StandardCharsets.UTF_8));
         File outputFolder = new File("src/main/resources/AlgorithmResults");
@@ -35,24 +35,31 @@ public class AlgorithmCheck {
             boolean isNegative = featuresLen != 3;
             String pronoun = splitFeature[index];
             String tense = splitFeature[index+1];
-            String unTransulatedSwahiliVerb = 
+
+            String unTranslatedSwahiliVerb =
             features.substring(features.lastIndexOf("+") + 1);
-            String featuresExtracted = 
+
+            String featuresExtracted =
             features.substring(0, features.lastIndexOf("+"));
-            Verb verb = new Verb(); 
-            verb.setSwahiliVerb(unTransulatedSwahiliVerb);
+
+            Verb verb = new Verb();
+            verb.setSwahiliVerb(unTranslatedSwahiliVerb);
             Dictionary dict = new Dictionary();
-            String englishVerb = dict.getEnglishVerb(unTransulatedSwahiliVerb);
-            EnglishSwahiliTranslation swahiliTranslation = 
+            String englishVerb = dict.getEnglishVerb(unTranslatedSwahiliVerb);
+
+            EnglishSwahiliTranslation swahiliTranslation =
             new EnglishSwahiliTranslation();
-            EnglishVerbs englishVerbs = 
+
+            EnglishVerbs englishVerbs =
             new EnglishVerbs(englishVerb,tense, pronoun, isNegative);
-            String column1 = features;
-            String column2 = englishVerbs.getConjugatedVerb();
-            String column3 = 
+
+            String english = englishVerbs.getConjugatedVerb();
+            String swahili =
             swahiliTranslation.translate(verb, featuresExtracted);
-            resultBuilder.append(column1 + "   "+column2+"  "+column3)
-            .append("\n");
+
+            resultBuilder.append(features).append("\t")
+                    .append(english).append("\t")
+                    .append(swahili).append("\n");
         }
         reader.close();
         writer.write(resultBuilder.toString());
