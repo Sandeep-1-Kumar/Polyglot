@@ -12,6 +12,7 @@ import java.util.HashSet;
 
 import static team4.slupolyglot.MyConstants.*;
 
+//TODO REFACTOR ME
 public class EnglishVerbs {
 
     private static final String IRREGULAR_PAST = "IRREGULAR_PAST";
@@ -84,6 +85,8 @@ public class EnglishVerbs {
         if(composedVerb[0].equals("be")){
             composedVerb[0] = treatTheBePresent();
         } else if (pronouns.get(pronoun).equals(ENGLISH_PRONOUNS[2])) {
+            if(composedVerb[0].equals("go"))
+                return "goes";
             char lastChar = composedVerb[0].charAt(composedVerb[0].length() - 1);
             if (lastChar == 'y') {
                 if (!isVowel(composedVerb[0].charAt(composedVerb[0].length() - 2))) {
@@ -119,37 +122,49 @@ public class EnglishVerbs {
         String[] composedVerb = this.verb.split(" ");
         boolean isBe = composedVerb[0].equals("be");
         String negation = null;
-        if(!isBe)
-            negation = isNegative ? "do not " : "";
+        if(!isBe) {
+            boolean is3s = pronouns.get(pronoun).equals(ENGLISH_PRONOUNS[2]);
+            if(!is3s)
+                negation = isNegative ? "do not " : "";
+            else
+                negation = isNegative ? "does not " : "";
+        }
 
         for (String englishPronoun : ENGLISH_PRONOUNS) {
             if (pronouns.get(pronoun).equals(englishPronoun)) {
-                if(!isBe)
-                    return (englishPronoun + negation + getPresent());
-                return (englishPronoun  + getPresent());
+                if(isNegative && !isBe) {
+                    return (englishPronoun + negation + composedVerb[0]);
+                } else {
+                    if (!isBe)
+                        return (englishPronoun + negation + getPresent());
+                    return (englishPronoun + getPresent());
+                }
             }
 
         }
         throw new IllegalArgumentException("Invalid pronoun");
     }
 
+    //todo string formatter
     private String treatTheBe() {
         String[] splittedVerb = this.verb.split(" ");
         boolean is3s = pronouns.get(pronoun).equals(ENGLISH_PRONOUNS[2]);
         int verbLen = splittedVerb.length;
 
         if(this.tense.equals(PAST)) {
-            String negation = isNegative ? "not" : "";
+            String negation = isNegative ? "not " : "";
 
             boolean is1s = pronouns.get(pronoun).equals(ENGLISH_PRONOUNS[0]);
 
-            String wasWere = (is3s || is1s) ? "was" : "were";
+            String wasWere = (is3s || is1s) ? "was " : "were ";
             for (String englishPronoun : ENGLISH_PRONOUNS) {
                 if (pronouns.get(pronoun).equals(englishPronoun)) {
                     if (verbLen == 1)
-                        return (englishPronoun + wasWere + negation);
+                        return (englishPronoun + wasWere + negation).replace("  "," ");
+                    else if (verbLen == 2)
+                        return (englishPronoun + wasWere + negation + " " + splittedVerb[1]).replace("  "," ");
                     else
-                        return (englishPronoun + wasWere + negation + " " + splittedVerb[1]);
+                        return (englishPronoun + wasWere + negation + " " + splittedVerb[1] + " " + splittedVerb[2]).replace("  "," ");
                 }
             }
         } else {

@@ -17,7 +17,7 @@ public class AlgorithmCheck {
     @Test
     public void testAlgorithm() throws IOException {
         ClassPathResource inputResource =
-        new ClassPathResource("AlgorithmTests/test_with_no_solution.tsv");
+        new ClassPathResource("AlgorithmTests/Tests.tsv");
         BufferedReader reader = new BufferedReader(new InputStreamReader
         (inputResource.getInputStream(), StandardCharsets.UTF_8));
         File outputFolder = new File("src/main/resources/AlgorithmResults");
