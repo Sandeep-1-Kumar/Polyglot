@@ -13,6 +13,7 @@ import java.util.HashSet;
 import static team4.slupolyglot.MyConstants.*;
 
 //TODO REFACTOR ME
+//todo always plan verbs with 3 elements
 public class EnglishVerbs {
 
     private static final String IRREGULAR_PAST = "IRREGULAR_PAST";
@@ -88,6 +89,8 @@ public class EnglishVerbs {
             if(composedVerb[0].equals("go"))
                 return "goes";
             char lastChar = composedVerb[0].charAt(composedVerb[0].length() - 1);
+            char secondLastChar = composedVerb[0].charAt(composedVerb[0].length() - 2);
+            String lastTwo = String.valueOf(secondLastChar+lastChar);
             if (lastChar == 'y') {
                 if (!isVowel(composedVerb[0].charAt(composedVerb[0].length() - 2))) {
                     if(composedVerb.length == 1)
@@ -96,16 +99,19 @@ public class EnglishVerbs {
                         return composedVerb[0].substring(0, composedVerb[0].length() - 1) + "ies"
                                 + " " +composedVerb[1];
                 }
-            } else if (lastChar == 'h') {
-                if (!isVowel(composedVerb[0].charAt(composedVerb[0].length() - 2))) {
-                    if(composedVerb.length == 1)
-                        return composedVerb[0].substring(0, composedVerb[0].length()) + "es";
-                    else
-                        return composedVerb[0].substring(0, composedVerb[0].length()) + "es"
-                                + " " +composedVerb[1];
-                }
-            }
-            else {
+            } else if (lastTwo.equals("sh") || lastTwo.equals("ch") ||
+                    lastChar == 'x' || lastChar == 's' || lastChar == 'z') {
+                if (composedVerb.length == 1)
+                    return composedVerb[0] + "es";
+                else if (composedVerb.length == 2)
+                    return composedVerb[0] + "es"
+                            + " " + composedVerb[1];
+                else
+                    return composedVerb[0] + "es"
+                            + " " + composedVerb[1] + " "
+                            + composedVerb[2];
+
+            } else {
                 if(composedVerb.length == 1)
                     return composedVerb[0] + "s";
                 else
@@ -265,7 +271,6 @@ public class EnglishVerbs {
         throw new IllegalArgumentException("Invalid pronoun");
     }
 
-    //todo able
     private String perfect() throws IOException {
         String[] splittedVerb = this.verb.split(" ");
 
