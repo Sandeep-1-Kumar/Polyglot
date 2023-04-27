@@ -5,13 +5,48 @@
 }
 
 .card-width-game2 {
-  width: 80% !important;
-  margin: auto;
+  width: 90% !important;
+  margin: 5% auto;
+}
+
+.card-game2 {
+  padding-top: 30px;
+}
+
+.con {
+  padding: 0 2%;
+}
+
+.card-title-game2 {
+  font-size: 1rem;
+}
+
+.cent-just {
+  padding: none;
 }
 
 .card-head-game2 {
-  font-size: 2.5rem;
+  font-size: 25px;
   font-weight: 100;
+}
+
+@media (min-width: 992px) {
+  .card-width-game2 {
+    width: 90% !important;
+    margin: auto;
+  }
+
+  .card-game2 {
+    padding-top: 30px;
+  }
+
+  .card-title-game2 {
+    font-size: 2.5rem;
+  }
+
+  .cent-just {
+    padding: 75px;
+  }
 }
 
 .card-head-game2-color {
@@ -73,12 +108,9 @@
   width: 90%;
 }
 
-.cent-just {
-  padding: 75px;
-}
-
 .padding-top {
   padding-top: 3%;
+  margin: auto;
 }
 
 .bg-color-cont {

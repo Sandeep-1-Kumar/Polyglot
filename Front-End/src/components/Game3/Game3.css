@@ -3,13 +3,23 @@
   border-radius: 50px;
   background-color: #002d40;
   color: white;
-  width: 75px;
-  font-size: 35px;
+  width: 55px;
+  height: 55px;
+  font-size: 25px;
   font-weight: 800;
 }
 
+.game3-p {
+  font-size: 18px;
+  margin: 0;
+}
+
 .main-game3 {
-  margin-top: 5%;
+  margin: 3% 3% 0;
+}
+
+.card-game3 {
+  padding-top: 30px;
 }
 
 .card-width-game3 {
@@ -23,7 +33,7 @@
 }
 
 .opt-div {
-  padding: 0 3%;
+  padding: 3%;
   background-color: rgba(26, 166, 183, 0.2);
   border-radius: 10px;
 }
@@ -32,7 +42,9 @@
   text-align: center;
   font-size: 35px;
   font-weight: 800;
+  padding: 0;
 }
+
 .question-text div {
   margin-bottom: 0.7rem;
 }
@@ -44,7 +56,7 @@
 }
 
 .quiz-head {
-  font-size: 45px;
+  font-size: 25px;
   margin-bottom: 1rem;
   text-align: center;
   border-radius: 30px;
@@ -53,7 +65,40 @@
   font-style: italic;
   font-weight: 600;
 }
+
 .submit-button {
   display: flex;
   justify-content: center;
+}
+
+.top-p-game3 {
+  font-size: 20px;
+}
+
+.span-game3 {
+  font-size: 10px;
+}
+
+@media (min-width: 992px) {
+  .quiz-head {
+    font-size: 45px;
+  }
+
+  .game3-p {
+    font-size: 2.5rem;
+  }
+
+  .omr-btn {
+    width: 75px;
+    height: 65px;
+    font-size: 35px;
+  }
+
+  .card-game3 {
+    padding-top: 70px;
+  }
+
+  .top-p-game3 {
+    font-size: 25px;
+  }
 }

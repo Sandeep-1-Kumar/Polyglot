@@ -12,6 +12,7 @@ function Game3() {
   const languageId = searchparams.get("languageId");
   const [transCards, setTransCards] = useState([]);
   const [engVerbCards, setEngVerbCards] = useState([]);
+  const [feature, setFeature] = useState([]);
   const [langCount, setLangCount] = useState(0);
   const trans = [];
   const engVerb = [];
@@ -23,8 +24,10 @@ function Game3() {
       langCount,
       trans,
       engVerb,
+      feature,
       setTransCards,
-      setEngVerbCards
+      setEngVerbCards,
+      setFeature
     );
   };
 
@@ -44,6 +47,7 @@ function Game3() {
           score={parseInt(score)}
           cardNo={10}
           cardAll={langCount}
+          feature={feature}
         />
       </div>
     </div>

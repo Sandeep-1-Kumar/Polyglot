@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import "./Game2.css";
 
 export function CardGame2(props) {
@@ -8,7 +8,7 @@ export function CardGame2(props) {
   const cardTitle = props.cardTitle;
   const cardText = props.cardText;
   return (
-    <Col>
+    <div className="col-md-3 col-sm-6 col-6">
       <Card
         id={cardNo}
         draggable
@@ -19,12 +19,12 @@ export function CardGame2(props) {
           <p className="p-desc top-p p-desc-game2">{cardText}</p>
         </Card.Header>
         <Card.Body>
-          <Card.Title className="card-head card-head-color card-head-game2">
+          <Card.Title className="card-head card-head-color card-head-game2 card-title-game2">
             {cardTitle}
           </Card.Title>
         </Card.Body>
       </Card>
-    </Col>
+    </div>
   );
 }
 
@@ -38,9 +38,10 @@ export function ContainerGame2(props) {
   const targetTextAfter = props.targetTextAfter;
   const images = props.images;
   return (
-    <Col>
+    <div className="col-md-3 col-sm-6 col-6">
       <Card
         id={targetNo}
+        className={targetDropped ? "bg-color-card-header" : "bg-color-cont"}
         style={
           targetDropped
             ? {
@@ -48,10 +49,13 @@ export function ContainerGame2(props) {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "contain",
                 backgroundPosition: "center",
+                width: "100%",
+                height: "100%",
+                margin: "auto",
+                padding: "5% auto",
               }
             : {}
         }
-        className={targetDropped ? "bg-color-card-header" : "bg-color-cont"}
         onDragOver={onDragOver}
         onDrop={onDrop}
       >
@@ -71,6 +75,6 @@ export function ContainerGame2(props) {
         </Card.Body>
       </Card>
       <div className="marg-top-card"></div>
-    </Col>
+    </div>
   );
 }

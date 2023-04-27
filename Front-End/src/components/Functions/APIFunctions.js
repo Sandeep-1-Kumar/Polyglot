@@ -524,8 +524,10 @@ export function getGameG3(
   langCount,
   trans,
   engVerb,
+  feature,
   setTransCards,
-  setEngVerbCards
+  setEngVerbCards,
+  setFeature
 ) {
   const game = {
     languageId,
@@ -544,9 +546,11 @@ export function getGameG3(
       for (var i = 0; i < Object.keys(responseJson["game_third"]).length; i++) {
         trans.push(responseJson["game_third"][i]["translatedVerb"]);
         engVerb.push(responseJson["game_third"][i]["conjugateEnglishVerb"]);
+        feature.push(responseJson["game_third"][i]["features"]);
       }
       setTransCards(trans);
       setEngVerbCards(engVerb);
+      setFeature(feature);
     })
     .catch();
 }
