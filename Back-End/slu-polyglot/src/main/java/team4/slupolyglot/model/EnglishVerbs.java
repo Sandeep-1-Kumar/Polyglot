@@ -213,7 +213,7 @@ public class EnglishVerbs {
     private String getRegularPast() {
         String[] splittedVerb = this.verb.split(" ");
         int verbLen = splittedVerb.length;
-        String past = "";
+        String past = splittedVerb[0] + "ed";
         StringBuilder sb =  new StringBuilder();
         char lastChar = splittedVerb[0].charAt(splittedVerb[0].length()-1);
         if( lastChar == 'e'){
@@ -221,8 +221,8 @@ public class EnglishVerbs {
         } else if (lastChar == 'y'){
             if(!isVowel(splittedVerb[0].charAt(splittedVerb[0].length()-2)))
                 past = splittedVerb[0].substring(0,splittedVerb[0].length()-1)+"ied";
-        } else
-            past = splittedVerb[0] + "ed";
+        }
+
         sb.append(past).append(" ");
 
         if (verbLen == 1)
