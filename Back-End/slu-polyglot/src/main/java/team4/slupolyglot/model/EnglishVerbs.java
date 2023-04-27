@@ -83,7 +83,7 @@ public class EnglishVerbs {
     }
     private String getPresent() {
         String[] composedVerb = this.verb.split(" ");
-        if(composedVerb[0].equals("be")){
+        if(composedVerb[0].equals("be")) {
             composedVerb[0] = treatTheBePresent();
         } else if (pronouns.get(pronoun).equals(ENGLISH_PRONOUNS[2])) {
             if(composedVerb[0].equals("go"))
@@ -114,16 +114,21 @@ public class EnglishVerbs {
             } else {
                 if(composedVerb.length == 1)
                     return composedVerb[0] + "s";
-                else
+                else if (composedVerb.length == 2)
                     return composedVerb[0] + "s" + " " +composedVerb[1];
+                else
+                    return composedVerb[0] + "s" + " " + composedVerb[1] + " " +
+                            composedVerb[2];
             }
         }
         if(composedVerb.length == 1)
             return composedVerb[0];
-        else
+        else if (composedVerb.length == 2)
             return composedVerb[0] + " " +composedVerb[1];
+        else
+            return composedVerb[0] + " " + composedVerb[1] + " " +
+                    composedVerb[2];
     }
-    // todo born without s
     private String present() {
         String[] composedVerb = this.verb.split(" ");
         boolean isBe = composedVerb[0].equals("be");
@@ -230,11 +235,12 @@ public class EnglishVerbs {
     }
     private String past() throws IOException {
         String[] splittedVerb = this.verb.split(" ");
+        int verbLen = splittedVerb.length;
 
         if(splittedVerb[0].equals("be"))
             return treatTheBe();
 
-        if (!findIrregularities(this.verb) || isNegative) {
+        if (!findIrregularities(splittedVerb[0]) || isNegative) {
             String negation = isNegative ? "did not " : "";
             String past = isNegative ? this.verb : getRegularPast();
             for (String englishPronoun : ENGLISH_PRONOUNS) {
@@ -242,9 +248,16 @@ public class EnglishVerbs {
                     return (englishPronoun  + negation + past);
             }
         } else {
-            String past = mapIrregularity(this.verb, IRREGULAR_PAST);
+            String past = mapIrregularity(splittedVerb[0], IRREGULAR_PAST);
             for (String englishPronoun : ENGLISH_PRONOUNS) {
-                if (pronouns.get(pronoun).equals(englishPronoun)) return (englishPronoun + past);
+                if (pronouns.get(pronoun).equals(englishPronoun)) {
+                    if(verbLen == 1)
+                        return (englishPronoun + past);
+                    else if(verbLen == 2){
+                        return (englishPronoun + past + " " + splittedVerb[1]);
+                    } else
+                        return (englishPronoun + past + " " + splittedVerb[2]);
+                }
             }
         }
 
@@ -273,6 +286,7 @@ public class EnglishVerbs {
 
     private String perfect() throws IOException {
         String[] splittedVerb = this.verb.split(" ");
+        int verbLen = splittedVerb.length;
 
         if(splittedVerb[0].equals("be"))
             return treatTheBe();
@@ -281,19 +295,35 @@ public class EnglishVerbs {
         String haveHas = is3s ? "has" : "have";
         String negation = isNegative ? " not" : "";
 
-        if(!findIrregularities(this.verb)) {
+        if(!findIrregularities(splittedVerb[0])) {
             String pastEd = getRegularPast();
 
             for (String englishPronoun : ENGLISH_PRONOUNS) {
-                if (pronouns.get(pronoun).equals(englishPronoun))
-                    return (englishPronoun + haveHas + negation + " " + pastEd);
+                if (pronouns.get(pronoun).equals(englishPronoun)){
+                    if(verbLen == 1)
+                        return (englishPronoun + haveHas + negation + " " + pastEd);
+                    else if(verbLen == 2){
+                        return (englishPronoun + haveHas + negation + " " + pastEd + " " +
+                                splittedVerb[1]);
+                    } else
+                        return (englishPronoun + haveHas + negation + " " + pastEd + " " +
+                                splittedVerb[1] + splittedVerb[2]);
+                }
             }
         } else {
-            String perfect = mapIrregularity(this.verb,IRREGULAR_PERFECT);
+            String perfect = mapIrregularity(splittedVerb[0],IRREGULAR_PERFECT);
 
             for (String englishPronoun : ENGLISH_PRONOUNS) {
-                if (pronouns.get(pronoun).equals(englishPronoun))
-                    return (englishPronoun + haveHas + negation + " " + perfect);
+                if (pronouns.get(pronoun).equals(englishPronoun)){
+                    if(verbLen == 1)
+                        return (englishPronoun + haveHas + negation + " " + perfect);
+                    else if(verbLen == 2){
+                        return (englishPronoun + haveHas + negation + " " + perfect + " " +
+                                splittedVerb[1]);
+                    } else
+                        return (englishPronoun + haveHas + negation + " " + perfect + " " +
+                                splittedVerb[1] + splittedVerb[2]);
+                }
             }
         }
         throw new IllegalArgumentException("Invalid pronoun");
