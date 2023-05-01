@@ -307,7 +307,7 @@ public class EnglishVerbs {
                                 splittedVerb[1]);
                     } else
                         return (englishPronoun + haveHas + negation + " " + pastEd + " " +
-                                splittedVerb[1] + splittedVerb[2]);
+                                splittedVerb[1] + " " + splittedVerb[2]);
                 }
             }
         } else {
@@ -322,7 +322,7 @@ public class EnglishVerbs {
                                 splittedVerb[1]);
                     } else
                         return (englishPronoun + haveHas + negation + " " + perfect + " " +
-                                splittedVerb[1] + splittedVerb[2]);
+                                splittedVerb[1] + " " + splittedVerb[2]);
                 }
             }
         }
