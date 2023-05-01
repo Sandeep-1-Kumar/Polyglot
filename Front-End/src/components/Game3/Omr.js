@@ -6,7 +6,7 @@ import BgLearning from "../Bg-Learning.svg";
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 import { BsXCircleFill } from "react-icons/bs";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { email, genRand, shuffleArray } from "../Functions/CommonScripts.js";
+import { email, genRand2, shuffleArray } from "../Functions/CommonScripts.js";
 import { updateScore } from "../Functions/APIFunctions.js";
 import GroupButton from "./GroupButton.js";
 
@@ -19,6 +19,7 @@ function Omr(props) {
   const cardNo = props.cardNo;
   const cardAll = props.cardAll;
   const engVerb = props.engVerb;
+  const feature = props.feature;
   const [count, setCount] = useState(0);
   let [score, setScore] = useState(0);
   const numbers = [0, 1, 2];
@@ -30,7 +31,7 @@ function Omr(props) {
 
   const initialCheck = (nums_set) => {
     if (score === 0) {
-      setNums(genRand(nums_set));
+      setNums(genRand2(nums_set));
     }
   };
 
@@ -103,116 +104,155 @@ function Omr(props) {
   return (
     <div>
       <div className="padding-main">
-        <div className="button-contianer">
-          <BsXCircleFill
-            className="btn-color"
-            onClick={(e) => {
-              check(e);
-              direct(e);
-            }}
-          />
-          <ProgressBar
-            now={parseInt((count + 1) * (100 / cardNo))}
-            label={`${parseInt((count + 1) * (100 / cardNo))}%`}
-            className="prg-bar"
-          />
+        {" "}
+        <div className="row">
+          <div className="col-1">
+            <BsXCircleFill
+              className="btn-color"
+              onClick={(e) => {
+                check(e);
+                direct(e);
+              }}
+            />
+          </div>
+          <div className="col-11">
+            <ProgressBar
+              now={parseInt((count + 1) * (100 / cardNo))}
+              label={`${parseInt((count + 1) * (100 / cardNo))}%`}
+              className="prg-bar"
+            />
+          </div>
         </div>
-      </div>
-      <div style={myStyle}>
-        <Card className="text-center card-width card-width-game3">
-          <Card.Body>
-            <div>
-              <h4 className="count">
-                <center>
-                  {count + 1}/{cardNo}
-                </center>
-                <Badge className="h4-score">Score {Math.ceil(score)}</Badge>
-              </h4>
-            </div>
-            <p className="p-main-game2 top-p">
-              ... Select the options to match the correct tenses ...
-            </p>
-            <div className="row main-game3">
-              <div className="col-md-4">
-                <Card.Title className="quiz-head">Questions</Card.Title>
-                <Card.Body className="question-text">
-                  <div className="game-head">
-                    1. {trans[shuffledCards[0] + nums[count]]}
-                  </div>
-                  <div className="game-head">
-                    2. {trans[shuffledCards[1] + nums[count]]}
-                  </div>
-                  <div className="game-head">
-                    3. {trans[shuffledCards[2] + nums[count]]}
-                  </div>
-                </Card.Body>
+        <div style={myStyle} className="card-game3">
+          <Card className="text-center card-width card-width-game3">
+            <Card.Body>
+              <div>
+                <h4 className="count">
+                  <center>
+                    {count + 1}/{cardNo}
+                  </center>
+                  <Badge className="h4-score">Score {Math.ceil(score)}</Badge>
+                </h4>
               </div>
-              <div className="col-md-4">
-                <Card.Title className="quiz-head">Options</Card.Title>
-                <div className="opt-div">
+              <br></br>
+              <p className="p-main-game2 top-p top-p-game3">
+                ... Select the options to match the correct tenses ...
+              </p>
+              <div className="row main-game3">
+                <div className="col-md-4 col-sm-6 col-6">
+                  <Card.Title className="quiz-head">Questions</Card.Title>
                   <Card.Body className="question-text">
-                    <GroupButton
-                      setTarget1={setTarget1}
-                      setQues="1"
-                      setColor1A={[setColor1A, color1A]}
-                      setColor1B={[setColor1B, color1B]}
-                      setColor1C={[setColor1C, color1C]}
-                      setColor2A={[setColor2A, color2A]}
-                      setColor2B={[setColor2B, color2B]}
-                      setColor2C={[setColor2C, color2C]}
-                      setColor3A={[setColor3A, color3A]}
-                      setColor3B={[setColor3B, color3B]}
-                      setColor3C={[setColor3C, color3C]}
-                    />
-                    <GroupButton
-                      setTarget2={setTarget2}
-                      setQues="2"
-                      setColor1A={[setColor1A, color1A]}
-                      setColor1B={[setColor1B, color1B]}
-                      setColor1C={[setColor1C, color1C]}
-                      setColor2A={[setColor2A, color2A]}
-                      setColor2B={[setColor2B, color2B]}
-                      setColor2C={[setColor2C, color2C]}
-                      setColor3A={[setColor3A, color3A]}
-                      setColor3B={[setColor3B, color3B]}
-                      setColor3C={[setColor3C, color3C]}
-                    />
-                    <GroupButton
-                      setTarget3={setTarget3}
-                      setQues="3"
-                      setColor1A={[setColor1A, color1A]}
-                      setColor1B={[setColor1B, color1B]}
-                      setColor1C={[setColor1C, color1C]}
-                      setColor2A={[setColor2A, color2A]}
-                      setColor2B={[setColor2B, color2B]}
-                      setColor2C={[setColor2C, color2C]}
-                      setColor3A={[setColor3A, color3A]}
-                      setColor3B={[setColor3B, color3B]}
-                      setColor3C={[setColor3C, color3C]}
-                    />
+                    <div className="game-head">
+                      <p className="game3-p">
+                        1. {trans[shuffledCards[0] + nums[count]]}
+                      </p>
+                    </div>
+                    <div className="game-head">
+                      <p className="game3-p">
+                        2. {trans[shuffledCards[1] + nums[count]]}
+                      </p>
+                    </div>
+                    <div className="game-head">
+                      <p className="game3-p">
+                        3. {trans[shuffledCards[2] + nums[count]]}
+                      </p>
+                    </div>
                   </Card.Body>
                 </div>
+                <div className="col-md-4 col-sm-6 col-6">
+                  <Card.Title className="quiz-head">Answers</Card.Title>
+                  <Card.Body className="question-text">
+                    <div className="game-head">
+                      <p
+                        class="game3-p"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title={feature[nums[count] + 0]}
+                      >
+                        A. {engVerb[nums[count] + 0]}
+                      </p>
+                    </div>
+                    <div className="game-head">
+                      <p
+                        class="game3-p"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title={feature[nums[count] + 1]}
+                      >
+                        B. {engVerb[nums[count] + 1]}
+                      </p>
+                    </div>
+                    <div className="game-head">
+                      <p
+                        class="game3-p"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title={feature[nums[count] + 2]}
+                      >
+                        C. {engVerb[nums[count] + 2]}
+                      </p>
+                    </div>
+                  </Card.Body>
+                </div>
+                <div className="col-md-4 col-sm-12 col-12">
+                  <Card.Title className="quiz-head">Options</Card.Title>
+                  <div className="opt-div">
+                    <Card.Body className="question-text">
+                      <GroupButton
+                        setTarget1={setTarget1}
+                        setQues="1"
+                        setColor1A={[setColor1A, color1A]}
+                        setColor1B={[setColor1B, color1B]}
+                        setColor1C={[setColor1C, color1C]}
+                        setColor2A={[setColor2A, color2A]}
+                        setColor2B={[setColor2B, color2B]}
+                        setColor2C={[setColor2C, color2C]}
+                        setColor3A={[setColor3A, color3A]}
+                        setColor3B={[setColor3B, color3B]}
+                        setColor3C={[setColor3C, color3C]}
+                      />
+                      <GroupButton
+                        setTarget2={setTarget2}
+                        setQues="2"
+                        setColor1A={[setColor1A, color1A]}
+                        setColor1B={[setColor1B, color1B]}
+                        setColor1C={[setColor1C, color1C]}
+                        setColor2A={[setColor2A, color2A]}
+                        setColor2B={[setColor2B, color2B]}
+                        setColor2C={[setColor2C, color2C]}
+                        setColor3A={[setColor3A, color3A]}
+                        setColor3B={[setColor3B, color3B]}
+                        setColor3C={[setColor3C, color3C]}
+                      />
+                      <GroupButton
+                        setTarget3={setTarget3}
+                        setQues="3"
+                        setColor1A={[setColor1A, color1A]}
+                        setColor1B={[setColor1B, color1B]}
+                        setColor1C={[setColor1C, color1C]}
+                        setColor2A={[setColor2A, color2A]}
+                        setColor2B={[setColor2B, color2B]}
+                        setColor2C={[setColor2C, color2C]}
+                        setColor3A={[setColor3A, color3A]}
+                        setColor3B={[setColor3B, color3B]}
+                        setColor3C={[setColor3C, color3C]}
+                      />
+                    </Card.Body>
+                  </div>
+                </div>
               </div>
-              <div className="col-md-4">
-                <Card.Title className="quiz-head">Answers</Card.Title>
-                <Card.Body className="question-text">
-                  <div className="game-head">A. {engVerb[nums[count] + 0]}</div>
-                  <div className="game-head">B. {engVerb[nums[count] + 1]}</div>
-                  <div className="game-head">C. {engVerb[nums[count] + 2]}</div>
-                </Card.Body>
+              <div className="button-contianer">
+                <FaChevronCircleLeft className="btn-left no-left-btn" />
+                <FaChevronCircleRight
+                  className="btn-right"
+                  onClick={(e) => {
+                    addCount(e);
+                  }}
+                />
               </div>
-            </div>
-            <div className="button-contianer">
-              <FaChevronCircleLeft className="btn-left no-left-btn" />
-              <FaChevronCircleRight
-                className="btn-right"
-                onClick={(e) => {
-                  addCount(e);
-                }}
-              />
-            </div>
-          </Card.Body>
-        </Card>
+            </Card.Body>
+          </Card>
+        </div>
       </div>
     </div>
   );

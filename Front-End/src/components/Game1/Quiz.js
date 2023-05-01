@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Quiz.css";
-import { Card, Button, Row, Col, ProgressBar, Badge } from "react-bootstrap";
+import { Card, Button, ProgressBar, Badge } from "react-bootstrap";
 import BgLearning from "../Bg-Learning.svg";
 import { BsXCircleFill } from "react-icons/bs";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -48,15 +48,17 @@ function Quiz(props) {
   };
 
   return (
-    <div>
-      <div className="padding-main">
-        <div className="button-contianer">
+    <div className="padding-main">
+      <div className="row">
+        <div className="col-1">
           <BsXCircleFill
             className="btn-color"
             onClick={(e) => {
               direct(e);
             }}
           />
+        </div>
+        <div className="col-11">
           <ProgressBar
             now={parseInt((count + 1) * (100 / cardNo))}
             label={`${parseInt((count + 1) * (100 / cardNo))}%`}
@@ -64,7 +66,7 @@ function Quiz(props) {
           />
         </div>
       </div>
-      <div style={myStyle}>
+      <div style={myStyle} className="card-game1">
         <Card className="text-center card-width card-width-game2">
           <Card.Body>
             <div>
@@ -76,14 +78,24 @@ function Quiz(props) {
               </h4>
             </div>
             <div className="quiz-options">
-              <p className="p-main-game2 top-p">{questions[count]}</p>
+              <br></br>
+              <br></br>
+              <div className="row">
+                <div className="col-12">
+                  <p className="p-main-game2 top-p top-p-game3">
+                    {questions[count]}
+                  </p>
+                </div>
+              </div>
               <Card.Img
                 variant="top"
                 src={images[count]}
-                className="img-card img-game1"
+                className="img-card"
               />
-              <Row>
-                <Col className="col-game1">
+              <br></br>
+              <div className="imag-gap"></div>
+              <div className="row">
+                <div className="col-lg-6">
                   <Button
                     key={1}
                     className="btn-game1"
@@ -91,8 +103,8 @@ function Quiz(props) {
                   >
                     {optionA[count]}
                   </Button>
-                </Col>
-                <Col className="col-game1">
+                </div>
+                <div className="col-lg-6">
                   <Button
                     key={2}
                     className="btn-game1 btn-game1-blue "
@@ -100,10 +112,10 @@ function Quiz(props) {
                   >
                     {optionB[count]}
                   </Button>
-                </Col>
-              </Row>
-              <Row>
-                <Col className="col-game1">
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-lg-6">
                   <Button
                     key={3}
                     className="btn-game1 btn-game1-blue "
@@ -111,8 +123,8 @@ function Quiz(props) {
                   >
                     {optionC[count]}
                   </Button>
-                </Col>
-                <Col className="col-game1">
+                </div>
+                <div className="col-lg-6">
                   <Button
                     key={4}
                     className="btn-game1"
@@ -120,8 +132,8 @@ function Quiz(props) {
                   >
                     {optionD[count]}
                   </Button>
-                </Col>
-              </Row>
+                </div>
+              </div>
             </div>
           </Card.Body>
         </Card>

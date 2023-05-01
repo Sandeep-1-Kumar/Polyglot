@@ -18,6 +18,16 @@
   margin: 2%;
 }
 
-.img-game1 {
-  width: 25%;
+.card-game1 {
+  padding-top: 30px;
+}
+
+@media (min-width: 992px) {
+  .card-game1 {
+    padding-top: 50px;
+  }
+}
+
+.imag-gap {
+  padding-top: 20px;
 }
