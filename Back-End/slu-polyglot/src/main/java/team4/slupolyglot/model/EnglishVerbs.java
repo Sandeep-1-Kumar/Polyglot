@@ -342,7 +342,7 @@ public class EnglishVerbs {
         String line;
 
         while ((line = reader.readLine()) != null) {
-            if(line.split("\t")[0].equals(verb))
+            if(line.split("\t")[0].split(" ")[0].equals(verb.split(" ")[0]))
                 return true;
         }
 
@@ -366,10 +366,8 @@ public class EnglishVerbs {
         String line;
 
         while ((line = reader.readLine()) != null) {
-            if(line.split("\t")[0].equals(verb)){
-                    //System.out.println(line.split("\t")[index]);
-                    System.out.println(this.isNegative+"+"+this.pronoun+"+"+this.tense+"+"+this.verb);
-                    return line.split("\t")[index];
+            if(line.split("\t")[0].split(" ")[0].equals(verb)){
+                    return line.split("\t")[index].split(" ")[0];
                 }
         }
 
