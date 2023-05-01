@@ -152,6 +152,7 @@ CREATE TABLE `verbs` (
 LOCK TABLES `verbs` WRITE;
 /*!40000 ALTER TABLE `verbs` DISABLE KEYS */;
 INSERT INTO polyglot.verbs VALUES
+INSERT INTO polyglot.verbs VALUES
 (1, 'swim', 'nuotare', 'https://i.pinimg.com/564x/e4/cf/f8/e4cff885de1bea8c2a8f4e8d9022c16f.jpg',Null, 'kuogelea'), 
 (2, 'fly', 'volare', 'https://i.pinimg.com/564x/bb/2c/64/bb2c64a126f3eef15e013ec295387495.jpg',Null, 'kuruka'), 
 (3, 'study', 'studiare', 'https://i.pinimg.com/564x/7b/bb/d2/7bbbd2e312172a811eee1a467e90c41a.jpg',Null, 'kujifunza'), 
