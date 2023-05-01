@@ -303,8 +303,7 @@ public class EnglishVerbs {
                     if(verbLen == 1)
                         return (englishPronoun + haveHas + negation + " " + pastEd);
                     else if(verbLen == 2){
-                        return (englishPronoun + haveHas + negation + " " + pastEd + " " +
-                                splittedVerb[1]);
+                        return (englishPronoun + haveHas + negation + " " + pastEd );
                     } else
                         return (englishPronoun + haveHas + negation + " " + pastEd + " " +
                                 splittedVerb[1] + " " + splittedVerb[2]);

@@ -24,6 +24,7 @@ NEG+2s+FUT+kuacha	you will not leave	hutaacha
 NEG+2s+PERF+kuacha	you have not left	hujaacha
 2p+PRES+kuacha	you leave	mnaacha
 2p+PAST+kuacha	you left	mliacha
+2p+PAST+kuacha	you left	mliacha
 2p+FUT+kuacha	you will leave	mtaacha
 2p+PERF+kuacha	you have left	mmeacha
 NEG+2p+PRES+kuacha	you do not leave	hamachi
@@ -1751,51 +1752,51 @@ NEG+3p+PERF+kufika	they have not arrived	hawajafika
 1s+PRES+kufikia	I arrive at	ninafikia
 1s+PAST+kufikia	I arrived at	nilifikia
 1s+FUT+kufikia	I will arrive at	nitafikia
-1s+PERF+kufikia	I have arrived at at	nimefikia
+1s+PERF+kufikia	I have arrived at	nimefikia
 NEG+1s+PRES+kufikia	I do not arrive	sifikii
 NEG+1s+PAST+kufikia	I did not arrive at	sikufikia
 NEG+1s+FUT+kufikia	I will not arrive at	sitafikia
-NEG+1s+PERF+kufikia	I have not arrived at at	sijafikia
+NEG+1s+PERF+kufikia	I have not arrived at	sijafikia
 1p+PRES+kufikia	we arrive at	tunafikia
 1p+PAST+kufikia	we arrived at	tulifikia
 1p+FUT+kufikia	we will arrive at	tutafikia
-1p+PERF+kufikia	we have arrived at at	tumefikia
+1p+PERF+kufikia	we have arrived at	tumefikia
 NEG+1p+PRES+kufikia	we do not arrive	hatufikii
 NEG+1p+PAST+kufikia	we did not arrive at	hatukufikia
 NEG+1p+FUT+kufikia	we will not arrive at	hatutafikia
-NEG+1p+PERF+kufikia	we have not arrived at at	hatujafikia
+NEG+1p+PERF+kufikia	we have not arrived at	hatujafikia
 2s+PRES+kufikia	you arrive at	unafikia
 2s+PAST+kufikia	you arrived at	ulifikia
 2s+FUT+kufikia	you will arrive at	utafikia
-2s+PERF+kufikia	you have arrived at at	umefikia
+2s+PERF+kufikia	you have arrived at	umefikia
 NEG+2s+PRES+kufikia	you do not arrive	hufikii
 NEG+2s+PAST+kufikia	you did not arrive at	hukufikia
 NEG+2s+FUT+kufikia	you will not arrive at	hutafikia
-NEG+2s+PERF+kufikia	you have not arrived at at	hujafikia
+NEG+2s+PERF+kufikia	you have not arrived at	hujafikia
 2p+PRES+kufikia	you arrive at	mnafikia
 2p+PAST+kufikia	you arrived at	mlifikia
 2p+FUT+kufikia	you will arrive at	mtafikia
-2p+PERF+kufikia	you have arrived at at	mmefikia
+2p+PERF+kufikia	you have arrived at	mmefikia
 NEG+2p+PRES+kufikia	you do not arrive	hamfikii
 NEG+2p+PAST+kufikia	you did not arrive at	hamkufikia
 NEG+2p+FUT+kufikia	you will not arrive at	hamtafikia
-NEG+2p+PERF+kufikia	you have not arrived at at	hamjafikia
+NEG+2p+PERF+kufikia	you have not arrived at	hamjafikia
 3s+PRES+kufikia	(s)he arrives at	anafikia
 3s+PAST+kufikia	(s)he arrived at	alifikia
 3s+FUT+kufikia	(s)he will arrive at	atafikia
-3s+PERF+kufikia	(s)he has arrived at at	amefikia
+3s+PERF+kufikia	(s)he has arrived at	amefikia
 NEG+3s+PRES+kufikia	(s)he does not arrive	hafikii
 NEG+3s+PAST+kufikia	(s)he did not arrive at	hakufikia
 NEG+3s+FUT+kufikia	(s)he will not arrive at	hatafikia
-NEG+3s+PERF+kufikia	(s)he has not arrived at at	hajafikia
+NEG+3s+PERF+kufikia	(s)he has not arrived at	hajafikia
 3p+PRES+kufikia	they arrive at	wanafikia
 3p+PAST+kufikia	they arrived at	walifikia
 3p+FUT+kufikia	they will arrive at	watafikia
-3p+PERF+kufikia	they have arrived at at	wamefikia
+3p+PERF+kufikia	they have arrived at	wamefikia
 NEG+3p+PRES+kufikia	they do not arrive	hawafikii
 NEG+3p+PAST+kufikia	they did not arrive at	hawakufikia
 NEG+3p+FUT+kufikia	they will not arrive at	hawatafikia
-NEG+3p+PERF+kufikia	they have not arrived at at	hawajafikia
+NEG+3p+PERF+kufikia	they have not arrived at	hawajafikia
 2s+IMP+kufikia	arrive at	fikia
 2p+IMP+kufikia	arrive at	fikieni
 1s+PRES+kufikiri	I think	ninafikiri
@@ -3701,51 +3702,51 @@ NEG+3p+PERF+kukubali	they have not agreed	hawajakubali
 1s+PRES+kukulia	I grow up	ninakulia
 1s+PAST+kukulia	I growed up	nilikulia
 1s+FUT+kukulia	I will grow up	nitakulia
-1s+PERF+kukulia	I have growed up up	nimekulia
+1s+PERF+kukulia	I have growed up	nimekulia
 NEG+1s+PRES+kukulia	I do not grow	sikulii
 NEG+1s+PAST+kukulia	I did not grow up	sikukulia
 NEG+1s+FUT+kukulia	I will not grow up	sitakulia
-NEG+1s+PERF+kukulia	I have not growed up up	sijakulia
+NEG+1s+PERF+kukulia	I have not growed up	sijakulia
 1p+PRES+kukulia	we grow up	tunakulia
 1p+PAST+kukulia	we growed up	tulikulia
 1p+FUT+kukulia	we will grow up	tutakulia
-1p+PERF+kukulia	we have growed up up	tumekulia
+1p+PERF+kukulia	we have growed up	tumekulia
 NEG+1p+PRES+kukulia	we do not grow	hatukulii
 NEG+1p+PAST+kukulia	we did not grow up	hatukukulia
 NEG+1p+FUT+kukulia	we will not grow up	hatutakulia
-NEG+1p+PERF+kukulia	we have not growed up up	hatujakulia
+NEG+1p+PERF+kukulia	we have not growed up	hatujakulia
 2s+PRES+kukulia	you grow up	unakulia
 2s+PAST+kukulia	you growed up	ulikulia
 2s+FUT+kukulia	you will grow up	utakulia
-2s+PERF+kukulia	you have growed up up	umekulia
+2s+PERF+kukulia	you have growed up	umekulia
 NEG+2s+PRES+kukulia	you do not grow	hukulii
 NEG+2s+PAST+kukulia	you did not grow up	hukukulia
 NEG+2s+FUT+kukulia	you will not grow up	hutakulia
-NEG+2s+PERF+kukulia	you have not growed up up	hujakulia
+NEG+2s+PERF+kukulia	you have not growed up	hujakulia
 2p+PRES+kukulia	you grow up	mnakulia
 2p+PAST+kukulia	you growed up	mlikulia
 2p+FUT+kukulia	you will grow up	mtakulia
-2p+PERF+kukulia	you have growed up up	mmekulia
+2p+PERF+kukulia	you have growed up	mmekulia
 NEG+2p+PRES+kukulia	you do not grow	hamkulii
 NEG+2p+PAST+kukulia	you did not grow up	hamkukulia
 NEG+2p+FUT+kukulia	you will not grow up	hamtakulia
-NEG+2p+PERF+kukulia	you have not growed up up	hamjakulia
+NEG+2p+PERF+kukulia	you have not growed up	hamjakulia
 3s+PRES+kukulia	(s)he grows up	anakulia
 3s+PAST+kukulia	(s)he growed up	alikulia
 3s+FUT+kukulia	(s)he will grow up	atakulia
-3s+PERF+kukulia	(s)he has growed up up	amekulia
+3s+PERF+kukulia	(s)he has growed up	amekulia
 NEG+3s+PRES+kukulia	(s)he does not grow	hakulii
 NEG+3s+PAST+kukulia	(s)he did not grow up	hakukulia
 NEG+3s+FUT+kukulia	(s)he will not grow up	hatakulia
-NEG+3s+PERF+kukulia	(s)he has not growed up up	hajakulia
+NEG+3s+PERF+kukulia	(s)he has not growed up	hajakulia
 3p+PRES+kukulia	they grow up	wanakulia
 3p+PAST+kukulia	they growed up	walikulia
 3p+FUT+kukulia	they will grow up	watakulia
-3p+PERF+kukulia	they have growed up up	wamekulia
+3p+PERF+kukulia	they have growed up	wamekulia
 NEG+3p+PRES+kukulia	they do not grow	hawakulii
 NEG+3p+PAST+kukulia	they did not grow up	hawakukulia
 NEG+3p+FUT+kukulia	they will not grow up	hawatakulia
-NEG+3p+PERF+kukulia	they have not growed up up	hawajakulia
+NEG+3p+PERF+kukulia	they have not growed up	hawajakulia
 2s+IMP+kukulia	grow up	kulia
 2p+IMP+kukulia	grow up	kulieni
 1s+PRES+kukumbuka	I remember	ninakumbuka
@@ -4201,51 +4202,51 @@ NEG+3p+PERF+kumaliza	they have not finished	hawajamaliza
 1s+PRES+kunenepa	I put on weight	ninanenepa
 1s+PAST+kunenepa	I put weight	nilinenepa
 1s+FUT+kunenepa	I will put on weight	nitanenepa
-1s+PERF+kunenepa	I have put onweight	nimenenepa
+1s+PERF+kunenepa	I have put on weight	nimenenepa
 NEG+1s+PRES+kunenepa	I do not put	sinenepi
 NEG+1s+PAST+kunenepa	I did not put on weight	sikunenepa
 NEG+1s+FUT+kunenepa	I will not put on weight	sitanenepa
-NEG+1s+PERF+kunenepa	I have not put onweight	sijanenepa
+NEG+1s+PERF+kunenepa	I have not put on weight	sijanenepa
 1p+PRES+kunenepa	we put on weight	tunanenepa
 1p+PAST+kunenepa	we put weight	tulinenepa
 1p+FUT+kunenepa	we will put on weight	tutanenepa
-1p+PERF+kunenepa	we have put onweight	tumenenepa
+1p+PERF+kunenepa	we have put on weight	tumenenepa
 NEG+1p+PRES+kunenepa	we do not put	hatunenepi
 NEG+1p+PAST+kunenepa	we did not put on weight	hatukunenepa
 NEG+1p+FUT+kunenepa	we will not put on weight	hatutanenepa
-NEG+1p+PERF+kunenepa	we have not put onweight	hatujanenepa
+NEG+1p+PERF+kunenepa	we have not put on weight	hatujanenepa
 2s+PRES+kunenepa	you put on weight	unanenepa
 2s+PAST+kunenepa	you put weight	ulinenepa
 2s+FUT+kunenepa	you will put on weight	utanenepa
-2s+PERF+kunenepa	you have put onweight	umenenepa
+2s+PERF+kunenepa	you have put on weight	umenenepa
 NEG+2s+PRES+kunenepa	you do not put	hunenepi
 NEG+2s+PAST+kunenepa	you did not put on weight	hukunenepa
 NEG+2s+FUT+kunenepa	you will not put on weight	hutanenepa
-NEG+2s+PERF+kunenepa	you have not put onweight	hujanenepa
+NEG+2s+PERF+kunenepa	you have not put on weight	hujanenepa
 2p+PRES+kunenepa	you put on weight	mnanenepa
 2p+PAST+kunenepa	you put weight	mlinenepa
 2p+FUT+kunenepa	you will put on weight	mtanenepa
-2p+PERF+kunenepa	you have put onweight	mmenenepa
+2p+PERF+kunenepa	you have put on weight	mmenenepa
 NEG+2p+PRES+kunenepa	you do not put	hamnenepi
 NEG+2p+PAST+kunenepa	you did not put on weight	hamkunenepa
 NEG+2p+FUT+kunenepa	you will not put on weight	hamtanenepa
-NEG+2p+PERF+kunenepa	you have not put onweight	hamjanenepa
+NEG+2p+PERF+kunenepa	you have not put on weight	hamjanenepa
 3s+PRES+kunenepa	(s)he puts on weight	ananenepa
 3s+PAST+kunenepa	(s)he put weight	alinenepa
 3s+FUT+kunenepa	(s)he will put on weight	atanenepa
-3s+PERF+kunenepa	(s)he has put onweight	amenenepa
+3s+PERF+kunenepa	(s)he has put on weight	amenenepa
 NEG+3s+PRES+kunenepa	(s)he does not put	hanenepi
 NEG+3s+PAST+kunenepa	(s)he did not put on weight	hakunenepa
 NEG+3s+FUT+kunenepa	(s)he will not put on weight	hatanenepa
-NEG+3s+PERF+kunenepa	(s)he has not put onweight	hajanenepa
+NEG+3s+PERF+kunenepa	(s)he has not put on weight	hajanenepa
 3p+PRES+kunenepa	they put on weight	wananenepa
 3p+PAST+kunenepa	they put weight	walinenepa
 3p+FUT+kunenepa	they will put on weight	watanenepa
-3p+PERF+kunenepa	they have put onweight	wamenenepa
+3p+PERF+kunenepa	they have put on weight	wamenenepa
 NEG+3p+PRES+kunenepa	they do not put	hawanenepi
 NEG+3p+PAST+kunenepa	they did not put on weight	hawakunenepa
 NEG+3p+FUT+kunenepa	they will not put on weight	hawatanenepa
-NEG+3p+PERF+kunenepa	they have not put onweight	hawajanenepa
+NEG+3p+PERF+kunenepa	they have not put on weight	hawajanenepa
 2s+IMP+kunenepa	put on weight	nenepa
 2p+IMP+kunenepa	put on weight	nenepeni
 1s+PRES+kununua	I buy	ninanunua
@@ -5201,51 +5202,51 @@ NEG+3p+PERF+kupendelea	they have not preferred	hawajapendelea
 1s+PRES+kupendeza	I look great	ninapendeza
 1s+PAST+kupendeza	I looked great	nilipendeza
 1s+FUT+kupendeza	I will look great	nitapendeza
-1s+PERF+kupendeza	I have looked great great	nimependeza
+1s+PERF+kupendeza	I have looked great	nimependeza
 NEG+1s+PRES+kupendeza	I do not look	sipendezi
 NEG+1s+PAST+kupendeza	I did not look great	sikupendeza
 NEG+1s+FUT+kupendeza	I will not look great	sitapendeza
-NEG+1s+PERF+kupendeza	I have not looked great great	sijapendeza
+NEG+1s+PERF+kupendeza	I have not looked great	sijapendeza
 1p+PRES+kupendeza	we look great	tunapendeza
 1p+PAST+kupendeza	we looked great	tulipendeza
 1p+FUT+kupendeza	we will look great	tutapendeza
-1p+PERF+kupendeza	we have looked great great	tumependeza
+1p+PERF+kupendeza	we have looked great	tumependeza
 NEG+1p+PRES+kupendeza	we do not look	hatupendezi
 NEG+1p+PAST+kupendeza	we did not look great	hatukupendeza
 NEG+1p+FUT+kupendeza	we will not look great	hatutapendeza
-NEG+1p+PERF+kupendeza	we have not looked great great	hatujapendeza
+NEG+1p+PERF+kupendeza	we have not looked great	hatujapendeza
 2s+PRES+kupendeza	you look great	unapendeza
 2s+PAST+kupendeza	you looked great	ulipendeza
 2s+FUT+kupendeza	you will look great	utapendeza
-2s+PERF+kupendeza	you have looked great great	umependeza
+2s+PERF+kupendeza	you have looked great	umependeza
 NEG+2s+PRES+kupendeza	you do not look	hupendezi
 NEG+2s+PAST+kupendeza	you did not look great	hukupendeza
 NEG+2s+FUT+kupendeza	you will not look great	hutapendeza
-NEG+2s+PERF+kupendeza	you have not looked great great	hujapendeza
+NEG+2s+PERF+kupendeza	you have not looked great	hujapendeza
 2p+PRES+kupendeza	you look great	mnapendeza
 2p+PAST+kupendeza	you looked great	mlipendeza
 2p+FUT+kupendeza	you will look great	mtapendeza
-2p+PERF+kupendeza	you have looked great great	mmependeza
+2p+PERF+kupendeza	you have looked great	mmependeza
 NEG+2p+PRES+kupendeza	you do not look	hampendezi
 NEG+2p+PAST+kupendeza	you did not look great	hamkupendeza
 NEG+2p+FUT+kupendeza	you will not look great	hamtapendeza
-NEG+2p+PERF+kupendeza	you have not looked great great	hamjapendeza
+NEG+2p+PERF+kupendeza	you have not looked great	hamjapendeza
 3s+PRES+kupendeza	(s)he looks great	anapendeza
 3s+PAST+kupendeza	(s)he looked great	alipendeza
 3s+FUT+kupendeza	(s)he will look great	atapendeza
-3s+PERF+kupendeza	(s)he has looked great great	amependeza
+3s+PERF+kupendeza	(s)he has looked great	amependeza
 NEG+3s+PRES+kupendeza	(s)he does not look	hapendezi
 NEG+3s+PAST+kupendeza	(s)he did not look great	hakupendeza
 NEG+3s+FUT+kupendeza	(s)he will not look great	hatapendeza
-NEG+3s+PERF+kupendeza	(s)he has not looked great great	hajapendeza
+NEG+3s+PERF+kupendeza	(s)he has not looked great	hajapendeza
 3p+PRES+kupendeza	they look great	wanapendeza
 3p+PAST+kupendeza	they looked great	walipendeza
 3p+FUT+kupendeza	they will look great	watapendeza
-3p+PERF+kupendeza	they have looked great great	wamependeza
+3p+PERF+kupendeza	they have looked great	wamependeza
 NEG+3p+PRES+kupendeza	they do not look	hawapendezi
 NEG+3p+PAST+kupendeza	they did not look great	hawakupendeza
 NEG+3p+FUT+kupendeza	they will not look great	hawatapendeza
-NEG+3p+PERF+kupendeza	they have not looked great great	hawajapendeza
+NEG+3p+PERF+kupendeza	they have not looked great	hawajapendeza
 2s+IMP+kupendeza	look great	pendeza
 2p+IMP+kupendeza	look great	pendezeni
 1s+PRES+kupika	I cook	ninapika
@@ -6851,51 +6852,51 @@ NEG+3p+PERF+kusumbuka	they have not worried	hawajasumbuka
 1s+PRES+kutafuta	I look for	ninatafuta
 1s+PAST+kutafuta	I looked for	nilitafuta
 1s+FUT+kutafuta	I will look for	nitatafuta
-1s+PERF+kutafuta	I have looked for for	nimetafuta
+1s+PERF+kutafuta	I have looked for	nimetafuta
 NEG+1s+PRES+kutafuta	I do not look	sitafuti
 NEG+1s+PAST+kutafuta	I did not look for	sikutafuta
 NEG+1s+FUT+kutafuta	I will not look for	sitatafuta
-NEG+1s+PERF+kutafuta	I have not looked for for	sijatafuta
+NEG+1s+PERF+kutafuta	I have not looked for	sijatafuta
 1p+PRES+kutafuta	we look for	tunatafuta
 1p+PAST+kutafuta	we looked for	tulitafuta
 1p+FUT+kutafuta	we will look for	tutatafuta
-1p+PERF+kutafuta	we have looked for for	tumetafuta
+1p+PERF+kutafuta	we have looked for	tumetafuta
 NEG+1p+PRES+kutafuta	we do not look	hatutafuti
 NEG+1p+PAST+kutafuta	we did not look for	hatukutafuta
 NEG+1p+FUT+kutafuta	we will not look for	hatutatafuta
-NEG+1p+PERF+kutafuta	we have not looked for for	hatujatafuta
+NEG+1p+PERF+kutafuta	we have not looked for	hatujatafuta
 2s+PRES+kutafuta	you look for	unatafuta
 2s+PAST+kutafuta	you looked for	ulitafuta
 2s+FUT+kutafuta	you will look for	utatafuta
-2s+PERF+kutafuta	you have looked for for	umetafuta
+2s+PERF+kutafuta	you have looked for	umetafuta
 NEG+2s+PRES+kutafuta	you do not look	hutafuti
 NEG+2s+PAST+kutafuta	you did not look for	hukutafuta
 NEG+2s+FUT+kutafuta	you will not look for	hutatafuta
-NEG+2s+PERF+kutafuta	you have not looked for for	hujatafuta
+NEG+2s+PERF+kutafuta	you have not looked for	hujatafuta
 2p+PRES+kutafuta	you look for	mnatafuta
 2p+PAST+kutafuta	you looked for	mlitafuta
 2p+FUT+kutafuta	you will look for	mtatafuta
-2p+PERF+kutafuta	you have looked for for	mmetafuta
+2p+PERF+kutafuta	you have looked for	mmetafuta
 NEG+2p+PRES+kutafuta	you do not look	hamtafuti
 NEG+2p+PAST+kutafuta	you did not look for	hamkutafuta
 NEG+2p+FUT+kutafuta	you will not look for	hamtatafuta
-NEG+2p+PERF+kutafuta	you have not looked for for	hamjatafuta
+NEG+2p+PERF+kutafuta	you have not looked for	hamjatafuta
 3s+PRES+kutafuta	(s)he looks for	anatafuta
 3s+PAST+kutafuta	(s)he looked for	alitafuta
 3s+FUT+kutafuta	(s)he will look for	atatafuta
-3s+PERF+kutafuta	(s)he has looked for for	ametafuta
+3s+PERF+kutafuta	(s)he has looked for	ametafuta
 NEG+3s+PRES+kutafuta	(s)he does not look	hatafuti
 NEG+3s+PAST+kutafuta	(s)he did not look for	hakutafuta
 NEG+3s+FUT+kutafuta	(s)he will not look for	hatatafuta
-NEG+3s+PERF+kutafuta	(s)he has not looked for for	hajatafuta
+NEG+3s+PERF+kutafuta	(s)he has not looked for	hajatafuta
 3p+PRES+kutafuta	they look for	wanatafuta
 3p+PAST+kutafuta	they looked for	walitafuta
 3p+FUT+kutafuta	they will look for	watatafuta
-3p+PERF+kutafuta	they have looked for for	wametafuta
+3p+PERF+kutafuta	they have looked for	wametafuta
 NEG+3p+PRES+kutafuta	they do not look	hawatafuti
 NEG+3p+PAST+kutafuta	they did not look for	hawakutafuta
 NEG+3p+FUT+kutafuta	they will not look for	hawatatafuta
-NEG+3p+PERF+kutafuta	they have not looked for for	hawajatafuta
+NEG+3p+PERF+kutafuta	they have not looked for	hawajatafuta
 2s+IMP+kutafuta	look for	tafuta
 2p+IMP+kutafuta	look for	tafuteni
 1s+PRES+kutaka	I want	ninataka
@@ -8101,51 +8102,51 @@ NEG+3p+PERF+kuwasiliana	they have not communicated	hawajawasiliana
 1s+PRES+kuwasha	I turn on	ninawasha
 1s+PAST+kuwasha	I turned on	niliwasha
 1s+FUT+kuwasha	I will turn on	nitawasha
-1s+PERF+kuwasha	I have turned on on	nimewasha
+1s+PERF+kuwasha	I have turned on	nimewasha
 NEG+1s+PRES+kuwasha	I do not turn	siwashi
 NEG+1s+PAST+kuwasha	I did not turn on	sikuwasha
 NEG+1s+FUT+kuwasha	I will not turn on	sitawasha
-NEG+1s+PERF+kuwasha	I have not turned on on	sijawasha
+NEG+1s+PERF+kuwasha	I have not turned on	sijawasha
 1p+PRES+kuwasha	we turn on	tunawasha
 1p+PAST+kuwasha	we turned on	tuliwasha
 1p+FUT+kuwasha	we will turn on	tutawasha
-1p+PERF+kuwasha	we have turned on on	tumewasha
+1p+PERF+kuwasha	we have turned on	tumewasha
 NEG+1p+PRES+kuwasha	we do not turn	hatuwashi
 NEG+1p+PAST+kuwasha	we did not turn on	hatukuwasha
 NEG+1p+FUT+kuwasha	we will not turn on	hatutawasha
-NEG+1p+PERF+kuwasha	we have not turned on on	hatujawasha
+NEG+1p+PERF+kuwasha	we have not turned on	hatujawasha
 2s+PRES+kuwasha	you turn on	unawasha
 2s+PAST+kuwasha	you turned on	uliwasha
 2s+FUT+kuwasha	you will turn on	utawasha
-2s+PERF+kuwasha	you have turned on on	umewasha
+2s+PERF+kuwasha	you have turned on	umewasha
 NEG+2s+PRES+kuwasha	you do not turn	huwashi
 NEG+2s+PAST+kuwasha	you did not turn on	hukuwasha
 NEG+2s+FUT+kuwasha	you will not turn on	hutawasha
-NEG+2s+PERF+kuwasha	you have not turned on on	hujawasha
+NEG+2s+PERF+kuwasha	you have not turned on	hujawasha
 2p+PRES+kuwasha	you turn on	mnawasha
 2p+PAST+kuwasha	you turned on	mliwasha
 2p+FUT+kuwasha	you will turn on	mtawasha
-2p+PERF+kuwasha	you have turned on on	mmewasha
+2p+PERF+kuwasha	you have turned on	mmewasha
 NEG+2p+PRES+kuwasha	you do not turn	hamwashi
 NEG+2p+PAST+kuwasha	you did not turn on	hamkuwasha
 NEG+2p+FUT+kuwasha	you will not turn on	hamtawasha
-NEG+2p+PERF+kuwasha	you have not turned on on	hamjawasha
+NEG+2p+PERF+kuwasha	you have not turned on	hamjawasha
 3s+PRES+kuwasha	(s)he turns on	anawasha
 3s+PAST+kuwasha	(s)he turned on	aliwasha
 3s+FUT+kuwasha	(s)he will turn on	atawasha
-3s+PERF+kuwasha	(s)he has turned on on	amewasha
+3s+PERF+kuwasha	(s)he has turned on	amewasha
 NEG+3s+PRES+kuwasha	(s)he does not turn	hawashi
 NEG+3s+PAST+kuwasha	(s)he did not turn on	hakuwasha
 NEG+3s+FUT+kuwasha	(s)he will not turn on	hatawasha
-NEG+3s+PERF+kuwasha	(s)he has not turned on on	hajawasha
+NEG+3s+PERF+kuwasha	(s)he has not turned on	hajawasha
 3p+PRES+kuwasha	they turn on	wanawasha
 3p+PAST+kuwasha	they turned on	waliwasha
 3p+FUT+kuwasha	they will turn on	watawasha
-3p+PERF+kuwasha	they have turned on on	wamewasha
+3p+PERF+kuwasha	they have turned on	wamewasha
 NEG+3p+PRES+kuwasha	they do not turn	hawawashi
 NEG+3p+PAST+kuwasha	they did not turn on	hawakuwasha
 NEG+3p+FUT+kuwasha	they will not turn on	hawatawasha
-NEG+3p+PERF+kuwasha	they have not turned on on	hawajawasha
+NEG+3p+PERF+kuwasha	they have not turned on	hawajawasha
 2s+IMP+kuwasha	turn on	washa
 2p+IMP+kuwasha	turn on	washeni
 1s+PRES+kuwaza	I think	ninawaza
@@ -8351,51 +8352,51 @@ NEG+3p+PERF+kuzaliwa	they have not been born	hawajazaliwa
 1s+PRES+kuzima	I turn off	ninazima
 1s+PAST+kuzima	I turned off	nilizima
 1s+FUT+kuzima	I will turn off	nitazima
-1s+PERF+kuzima	I have turned off off	nimezima
+1s+PERF+kuzima	I have turned off	nimezima
 NEG+1s+PRES+kuzima	I do not turn	sizimi
 NEG+1s+PAST+kuzima	I did not turn off	sikuzima
 NEG+1s+FUT+kuzima	I will not turn off	sitazima
-NEG+1s+PERF+kuzima	I have not turned off off	sijazima
+NEG+1s+PERF+kuzima	I have not turned off	sijazima
 1p+PRES+kuzima	we turn off	tunazima
 1p+PAST+kuzima	we turned off	tulizima
 1p+FUT+kuzima	we will turn off	tutazima
-1p+PERF+kuzima	we have turned off off	tumezima
+1p+PERF+kuzima	we have turned off	tumezima
 NEG+1p+PRES+kuzima	we do not turn	hatuzimi
 NEG+1p+PAST+kuzima	we did not turn off	hatukuzima
 NEG+1p+FUT+kuzima	we will not turn off	hatutazima
-NEG+1p+PERF+kuzima	we have not turned off off	hatujazima
+NEG+1p+PERF+kuzima	we have not turned off	hatujazima
 2s+PRES+kuzima	you turn off	unazima
 2s+PAST+kuzima	you turned off	ulizima
 2s+FUT+kuzima	you will turn off	utazima
-2s+PERF+kuzima	you have turned off off	umezima
+2s+PERF+kuzima	you have turned off	umezima
 NEG+2s+PRES+kuzima	you do not turn	huzimi
 NEG+2s+PAST+kuzima	you did not turn off	hukuzima
 NEG+2s+FUT+kuzima	you will not turn off	hutazima
-NEG+2s+PERF+kuzima	you have not turned off off	hujazima
+NEG+2s+PERF+kuzima	you have not turned off	hujazima
 2p+PRES+kuzima	you turn off	mnazima
 2p+PAST+kuzima	you turned off	mlizima
 2p+FUT+kuzima	you will turn off	mtazima
-2p+PERF+kuzima	you have turned off off	mmezima
+2p+PERF+kuzima	you have turned off	mmezima
 NEG+2p+PRES+kuzima	you do not turn	hamzimi
 NEG+2p+PAST+kuzima	you did not turn off	hamkuzima
 NEG+2p+FUT+kuzima	you will not turn off	hamtazima
-NEG+2p+PERF+kuzima	you have not turned off off	hamjazima
+NEG+2p+PERF+kuzima	you have not turned off	hamjazima
 3s+PRES+kuzima	(s)he turns off	anazima
 3s+PAST+kuzima	(s)he turned off	alizima
 3s+FUT+kuzima	(s)he will turn off	atazima
-3s+PERF+kuzima	(s)he has turned off off	amezima
+3s+PERF+kuzima	(s)he has turned off	amezima
 NEG+3s+PRES+kuzima	(s)he does not turn	hazimi
 NEG+3s+PAST+kuzima	(s)he did not turn off	hakuzima
 NEG+3s+FUT+kuzima	(s)he will not turn off	hatazima
-NEG+3s+PERF+kuzima	(s)he has not turned off off	hajazima
+NEG+3s+PERF+kuzima	(s)he has not turned off	hajazima
 3p+PRES+kuzima	they turn off	wanazima
 3p+PAST+kuzima	they turned off	walizima
 3p+FUT+kuzima	they will turn off	watazima
-3p+PERF+kuzima	they have turned off off	wamezima
+3p+PERF+kuzima	they have turned off	wamezima
 NEG+3p+PRES+kuzima	they do not turn	hawazimi
 NEG+3p+PAST+kuzima	they did not turn off	hawakuzima
 NEG+3p+FUT+kuzima	they will not turn off	hawatazima
-NEG+3p+PERF+kuzima	they have not turned off off	hawajazima
+NEG+3p+PERF+kuzima	they have not turned off	hawajazima
 2s+IMP+kuzima	turn off	zima
 2p+IMP+kuzima	turn off	zimeni
 1s+PRES+kuzoea	I am used to	ninazoea
