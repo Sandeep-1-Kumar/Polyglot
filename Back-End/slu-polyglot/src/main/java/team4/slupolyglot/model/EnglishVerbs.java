@@ -26,7 +26,7 @@ public class EnglishVerbs {
 
     private String tense;
     private boolean isNegative = false;
-    public final static String[] ENGLISH_PRONOUNS = {"I ","you ","(s)he ","we ","you ","they "};
+    public final static String[] ENGLISH_PRONOUNS = {"I ","you ","(s)he ","we ","ye ","they "};
     HashMap<String, String> pronouns = new HashMap<>() {{
         put(GENERAL_PRONOUNS[0], ENGLISH_PRONOUNS[0]);
         put(GENERAL_PRONOUNS[1], ENGLISH_PRONOUNS[1]);
