@@ -88,6 +88,8 @@ public class EnglishVerbs {
         } else if (pronouns.get(pronoun).equals(ENGLISH_PRONOUNS[2])) {
             if(composedVerb[0].equals("go"))
                 return "goes";
+            if(composedVerb[0].equals("teach"))
+                return "teaches";
             char lastChar = composedVerb[0].charAt(composedVerb[0].length() - 1);
             char secondLastChar = composedVerb[0].charAt(composedVerb[0].length() - 2);
             String lastTwo = String.valueOf(secondLastChar+lastChar);
@@ -144,7 +146,10 @@ public class EnglishVerbs {
         for (String englishPronoun : ENGLISH_PRONOUNS) {
             if (pronouns.get(pronoun).equals(englishPronoun)) {
                 if(isNegative && !isBe) {
-                    return (englishPronoun + negation + composedVerb[0]);
+                    if(composedVerb.length == 1)
+                        return englishPronoun + negation + composedVerb[0];
+                    else
+                        return englishPronoun + negation + composedVerb[0] + " " +composedVerb[1];
                 } else {
                     if (!isBe)
                         return (englishPronoun + negation + getPresent());
